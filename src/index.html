@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+font-size=100px
+ rem单位根据html字体大小计算出的一个单位。会有一个默认缩放比取值10
+ 100px/10 = 1rem;
+ -->
+<html lang="en" ng-app="app" ng-controller="appController">
+<head >
+    <meta charset="UTF-8">
+    <title ng-bind="name"></title>
+    <!--设置视口 当前项目是运行到手机端-->
+    <meta name="viewport" content="width=device-width maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+<!--导航-->
+<nav></nav>
+<search></search>
+<!--首页-->
+<div ng-show="type == 'movie'" ui-view="movie"></div>
+<!--作者-->
+<div ng-show="type == 'music'" ui-view="music"></div>
+<!--栏目-->
+<div ng-show="type == 'book'" ui-view="book"></div>
+<!--我的-->
+<div ng-show="type == 'my'" ui-view="my"></div>
+
+<!--底部标签切换-->
+<tabbar></tabbar>
+
+
+</body>
+
+<!--设置页面默认字体大小-->
+<script>
+    var font = window.screen.width / 10 + 'px';
+    document.getElementsByTagName('html')[0].style.fontSize = font;
+</script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/index.js"></script>
+</html>

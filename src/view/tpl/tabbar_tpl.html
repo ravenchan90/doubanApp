@@ -1,0 +1,20 @@
+<div class="tabbar">
+
+    <ul>
+        <li ng-click="tabbarClick('movie')">
+            <a ng-class="{active:type=='movie'}"><img ng-src="images/{{type == 'movie'? 'homeSel.png': 'home_icon.png'}}" alt="">电影</a>
+        </li>
+
+        <li ng-click="tabbarClick('music')">
+            <a ng-class="{active:type=='music'}"><img ng-src="images/{{type == 'music'? 'authorSel.png': 'author_icon.png'}}" alt="">音乐</a>
+        </li>
+
+        <li ng-click="tabbarClick('book')">
+            <a ng-class="{active:type=='book'}"><img ng-src="images/{{type == 'book'? 'contentSel.png': 'content_icon.png'}}" alt="">读书</a>
+        </li>
+        <li ng-click="tabbarClick('my')">
+            <a ng-class="{active:type=='my'}"><img ng-src="images/{{type == 'my'? 'mySel.png': 'my_icon.png'}}" alt="">我的</a>
+        </li>
+    </ul>
+
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "doubanApp",
+  "version": "1.0.0",
+  "description": "基于angular的豆瓣电影webApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravenchan90/doubanApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravenchan90/doubanApp/issues"
+  },
+  "homepage": "https://github.com/ravenchan90/doubanApp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-uglify": "^3.0.0",
+    "open": "0.0.5"
+  }
+}

@@ -1,0 +1,17 @@
+<div class="movieList">
+    <div class="loading" ng-show="isLoading">
+        <img ng-src="images/loading.gif" >
+    </div>
+    <div class="list">
+        <div>
+            <h3 ng-bind="movieList.title"></h3>
+            <a ng-click="more()">更多&gt;</a>
+        </div>
+        <ul>
+            <li ng-repeat="movie in  movieList.subjects" ui-sref="app.detail({id:movie.id})">
+                <img ng-src="{{movie.images.medium}}" alt="">
+                <p ng-bind="movie.title"><</p>
+            </li>
+        </ul>
+    </div>
+</div>

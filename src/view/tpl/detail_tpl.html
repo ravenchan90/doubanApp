@@ -1,0 +1,17 @@
+<div class="movieDetail1">
+    <div class="loading" ng-show="isLoading">
+        <img ng-src="images/loading.gif" >
+    </div>
+    <!--电影详情展示区-->
+    <div ng-hide="false">
+        <h3 ng-bind="movieDetail.title"></h3>
+        <div class="detail_content">
+            <img ng-src="{{movieDetail.images.large}}">
+            <p>类型: <span ng-repeat="genre in movieDetail.genres" ng-bind="genre + ' '"></span></p>
+            <p>导演: <span ng-repeat="director in movieDetail.directors" ng-bind="director.name + ' '"></span></p>
+            <p>主演: <span ng-repeat="cast in movieDetail.casts" ng-bind="cast.name + '&nbsp;&nbsp;'"></span></p>
+        </div>
+        <div ng-bind="movieDetail.summary"></div>
+    </div>
+
+</div>
