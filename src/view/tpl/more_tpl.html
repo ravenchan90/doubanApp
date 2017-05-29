@@ -1,14 +1,13 @@
-<div class="movieList">
+<div class="moreList" >
     <div class="loading" ng-show="isLoading">
         <img ng-src="images/loading.gif" >
     </div>
-    <div class="list" ng-hide="isLoading">
+    <div class="list" ng-hide="isLoading" >
         <div>
-            <h3 ng-bind="movieList.title"></h3>
-            <a ng-click="more()"  ui-sref="app.more({type:movieList.type})">更多&gt;</a>
+            <h3 ng-bind="moreMovie.title"></h3>
         </div>
         <ul>
-            <li ng-repeat="movie in  movieList.subjects" ui-sref="app.detail({id:movie.id})">
+            <li ng-repeat="movie in  moreMovie.subjects" ui-sref="app.detail({id:movie.id})">
                 <img ng-src="{{movie.images.medium}}" alt="">
                 <p ng-bind="movie.title"><</p>
             </li>

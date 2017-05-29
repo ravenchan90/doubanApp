@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2017/5/9.
+ * Created by raven on 2017/5/9.
  */
 (function (angular) {
     "use strict";
@@ -19,15 +19,18 @@
         myHttp.jsonp(url1,params,function (data) {
             console.log(data);
             $scope.data =data;
-            $scope.isLoading = false;
+            $scope.data.type ="in_theaters";
             $scope.$apply();
+            $scope.isLoading = false;
         });
         myHttp.jsonp(url2,params,function (data) {
             $scope.data2 =data;
+            $scope.data2.type ="coming_soon";
             $scope.$apply();
         });
         myHttp.jsonp(url3,params,function (data) {
             $scope.data3 =data;
+            $scope.data3.type ="top250";
             $scope.$apply();
         });
     }]);

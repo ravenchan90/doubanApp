@@ -3,7 +3,7 @@
         <img ng-src="images/loading.gif" >
     </div>
     <!--电影详情展示区-->
-    <div ng-hide="false">
+    <div ng-hide="isLoading">
         <h3 ng-bind="movieDetail.title"></h3>
         <div class="detail_content">
             <img ng-src="{{movieDetail.images.large}}">
