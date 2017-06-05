@@ -7,6 +7,7 @@
     angular.module('app').controller('moreController',['$scope','myHttp','apiKey','$stateParams','$window',function ($scope,myHttp,apiKey,$stateParams,$window) {
 
         $scope.isLoading = true;
+        $scope.loadNewMovie = true;
         /*请求数据*/
         const baseUrl = 'https://api.douban.com/v2/movie/';
         const params = {

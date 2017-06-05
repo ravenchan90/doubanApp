@@ -16,6 +16,7 @@
                    /*更改标题*/
                    ele.find('span').html(args.title);
                });
+
            }
        }
     });

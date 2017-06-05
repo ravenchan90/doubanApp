@@ -8,6 +8,8 @@
   }
   .mt(40);
   .list{
+    position: relative;
+    overflow: hidden;
     z-index: 99;
     div{
       h3{
@@ -21,15 +23,19 @@
       }
     }
     ul{
-      overflow: hidden;
+      .w(1100);
+      .h(170);
+      position: relative;
+      top: 0;
+      left: 0;
       li{
         .w(100);
         .h(170);
         list-style: none;
         float: left;
-        .ml(18);
+        .ml(20);
         img{
-          .w(100);
+          .w(98);
           .h(130);
           border: 1px solid #ccc;
         }

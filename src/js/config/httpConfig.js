@@ -9,7 +9,7 @@
         $sceDelegateProvider.resourceUrlWhitelist([
             'self',
             "https://api.douban.com/**",
-            'http://localhost/api/**'
+
         ]);
     }]);
 

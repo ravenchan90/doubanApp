@@ -5,7 +5,7 @@
     <div class="list" ng-hide="isLoading">
         <div>
             <h3 ng-bind="movieList.title"></h3>
-            <a ng-click="more()"  ui-sref="app.more({type:movieList.type})">更多&gt;</a>
+            <a ui-sref="app.more({type:movieList.type})">更多&gt;</a>
         </div>
         <ul>
             <li ng-repeat="movie in  movieList.subjects" ui-sref="app.detail({id:movie.id})">

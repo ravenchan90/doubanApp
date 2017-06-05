@@ -33,5 +33,6 @@
             $scope.data3.type ="top250";
             $scope.$apply();
         });
+
     }]);
 })(angular);

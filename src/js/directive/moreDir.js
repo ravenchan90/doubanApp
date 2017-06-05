@@ -14,24 +14,35 @@
                 isLoading:"=",
                 url:'=',
                 params:'=',
-                loadData:"&"
+                loadData:"&",
+                loadNewMovie:"="
             },
             /* 设置动态加载电影列表 */
             link:function ($scope,$ele,$attr) {
 
                 var timer = null;
                 var body = document.body;
+
+                $scope.params.count = window.screen.availWidth > 600?30:15;
                 
                 clearInterval(timer);
                 timer = setInterval(function () {
                     body.onscroll = function () {
                         /*判断是否到达加载位置*/
-                        if(body.scrollTop + window.screen.availHeight >body.clientHeight - 300){
+                        if(body.scrollTop + window.screen.availHeight >body.clientHeight - 600){
                             /*判断电影总数是否加载完毕*/
-                            if($scope.moreMovie.start > $scope.moreMovie.total)return;
+                            if($scope.moreMovie.start > $scope.moreMovie.total){
+                                $scope.loadNewMovie = false;
+                                $scope.$apply();
+                                clearInterval(timer);
+                                return;
+                            }
                             /*判断上一次加载是否完毕*/
                             if($scope.params.start != $scope.moreMovie.start)return;
+
+
                             $scope.params.start = $scope.moreMovie.start + $scope.params.count;
+
                             myHttp.jsonp($scope.url,$scope.params,function (data) {
 
                                 $scope.moreMovie.start = data.start;

@@ -13,6 +13,8 @@
         /*导航标题*/
         var title = "豆瓣电影";
 
+
+
         /*监听tabbar通知*/
        $scope.tabbarClick = function (type) {
            $scope.type = type;
@@ -41,6 +43,7 @@
            $window.history.back();
 
        };
+
 
        /*监听地址的变化
          $watch('$location.url()')

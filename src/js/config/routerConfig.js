@@ -32,7 +32,7 @@
         //配置主路由
         $stateProvider.state('app.index', {
             url: '/index',
-            template: '<list movie-list="data" is-loading="isLoading"></list><list movie-list="data2" is-loading="isLoading"></list><list movie-list="data3" is-loading="isLoading"></list>'
+            template: '<list movie-list="data" is-loading="isLoading" ></list><list movie-list="data2" is-loading="isLoading"></list><list movie-list="data3" is-loading="isLoading"></list>'
         })
             .state('app.detail', {
                 url: '/detail/:id',
@@ -41,7 +41,7 @@
             })
             .state('app.more', {
                 url: '/more/:type',
-                template: '<more more-movie="data" is-loading="isLoading"  params="params" url="url" load-data="loadData"></more>',
+                template: '<more more-movie="data" is-loading="isLoading"  params="params" url="url" load-data="loadData" load-new-movie="loadNewMovie"></more>',
                 controller: 'moreController'
             });
 
